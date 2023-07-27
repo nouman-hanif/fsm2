@@ -1,6 +1,5 @@
-import 'package:dcli/dcli.dart' hide equals;
+import 'package:dcli/dcli.dart';
 import 'package:fsm2/fsm2.dart';
-import 'package:fsm2/src/types.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 

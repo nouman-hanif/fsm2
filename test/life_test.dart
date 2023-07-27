@@ -1,6 +1,6 @@
 import 'package:fsm2/fsm2.dart';
 import 'package:test/test.dart';
-import 'package:dcli/dcli.dart' hide equals;
+import 'package:dcli/dcli.dart';
 
 late StateMachine machine;
 void main() {

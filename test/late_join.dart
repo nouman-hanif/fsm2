@@ -1,5 +1,4 @@
 import 'package:fsm2/fsm2.dart';
-import 'package:fsm2/src/types.dart';
 import 'package:test/test.dart';
 
 import 'watcher.mocks.dart';
@@ -37,7 +36,10 @@ StateMachine createMachine(MockWatcher watcher) {
     ..state<Idle>((b) => b..on<OnFocus, Typing>())
     ..state<Typing>((b) => b
       ..on<OnBlur, Idle>()
-      ..onFork<OnValueChange>((b) => b..target<Point>()..target<Autocomplete>(),
+      ..onFork<OnValueChange>(
+          (b) => b
+            ..target<Point>()
+            ..target<Autocomplete>(),
           condition: (e) => e.isFormula)
       ..coregion<TypingFormula>((b) => b
         ..onJoin<OnValueChange, Typing>(condition: (e) => !e.isFormula)

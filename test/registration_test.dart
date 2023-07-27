@@ -1,6 +1,4 @@
 import 'package:fsm2/fsm2.dart';
-import 'package:fsm2/src/builders/co_region_builder.dart';
-import 'package:fsm2/src/builders/state_builder.dart';
 import 'package:test/test.dart';
 
 // enum RWStates

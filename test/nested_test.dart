@@ -1,5 +1,5 @@
 @Timeout(Duration(minutes: 10))
-import 'package:dcli/dcli.dart' hide equals;
+import 'package:dcli/dcli.dart';
 import 'package:fsm2/fsm2.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
@@ -198,8 +198,9 @@ Future<StateMachine> _createMachine<S extends State>(
         ..state<Matrix>((_) {}))
       ..state<InHeaven>((b) => b..state<Buddhist>((b) => b))
       ..state<InHell>((b) => b
-        ..state<Christian>(
-            (b) => b..state<SalvationArmy>((b) {})..state<Catholic>((b) => b))))
+        ..state<Christian>((b) => b
+          ..state<SalvationArmy>((b) {})
+          ..state<Catholic>((b) => b))))
     ..onTransition((from, event, to) => watcher.log('${event.runtimeType}')));
   return machine;
 }
