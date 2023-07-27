@@ -13,7 +13,7 @@ dependencies:
     git:
       url: git@github.com:onepub-dev/dcli.git
       path: dcli
-      ref: 9330792a89a2d98f1a009681ef7326cb4fbfd200
+      ref: 7ce4004e4738e1fec15f7ea1603fac4463c22208
 
   logger: ^1.0.0
   meta: ^1.6.0
